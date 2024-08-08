@@ -32,3 +32,5 @@ class Counter {
 const singletonCounter = Object.freeze(new Counter());
 
 export default singletonCounter;
+
+// Restricting the instantiation to just one instance could potentially save a lot of memory space. Instead of having to set up memory for a new instance each time, we only have to set up memory for that one instance, which is referenced throughout the application. However, Singletons are actually considered an anti-pattern, and can (or.. should) be avoided in JavaScript.
